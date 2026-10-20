@@ -15,7 +15,7 @@ PUBBLICAZIONE CONSIGLIATA: NETLIFY CON REPOSITORY GITHUB
 RIVELAZIONE AUTOMATICA
 Imposta in Netlify (Project configuration > Environment variables) le variabili:
 LOCATION_ADDRESS = indirizzo completo della cantina (facoltativo; se assente, appare SECRET WINE CELLAR)
-LOCATION_MAPS_URL = https://maps.app.goo.gl/kuj99ByGESoAXH6Q8?g_st=ic
+Il link della location è configurato esclusivamente nelle variabili d'ambiente di Netlify.
 Non inserire mai queste variabili nel codice pubblico o nel repository. Sono lette soltanto dalla funzione server.
 Dopo aver configurato le variabili, effettua un nuovo deploy se richiesto da Netlify.
 Il server non trasmette l'indirizzo prima del 30/10/2026 ore 22:00 italiane. Dopo la scadenza la pagina si aggiorna automaticamente entro circa 30 secondi. L'ora viene verificata dal server, non soltanto dal browser.

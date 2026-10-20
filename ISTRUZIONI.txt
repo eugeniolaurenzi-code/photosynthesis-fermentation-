@@ -1,0 +1,27 @@
+PHOTOSYNTESIS — FERMENTATION | MINISITO
+
+Questo progetto contiene un sito completo, responsivo, con i loghi originali estratti dai file forniti, animazione, countdown e rivelazione programmata per il 30 ottobre 2026 alle 22:00 (Europe/Rome, UTC+1).
+
+IMPORTANTE: IL SITO NON E' ANCORA PUBBLICATO. IL QR DEFINITIVO SI GENERA SOLO DOPO AVER OTTENUTO E VERIFICATO L'URL PUBBLICO.
+
+PUBBLICAZIONE CONSIGLIATA: NETLIFY CON REPOSITORY GITHUB
+1. Crea un repository GitHub e carica tutti i file e le cartelle di questo pacchetto.
+2. In Netlify scegli Add new project > Import an existing project > GitHub, seleziona il repository e pubblica.
+3. Verifica che il sito e la funzione https://TUOSITO.netlify.app/.netlify/functions/reveal rispondano correttamente. Prima della scadenza la funzione deve mostrare {"revealed":false}.
+4. Copia l'URL definitivo https://TUOSITO.netlify.app/ (se cambi il dominio, dovrai rigenerare il QR).
+5. Genera il QR eseguendo: python genera_qr.py https://TUOSITO.netlify.app/
+6. Prova il QR con almeno due telefoni prima di stampare 150 inviti.
+
+RIVELAZIONE AUTOMATICA
+Imposta in Netlify (Project configuration > Environment variables) le variabili:
+LOCATION_ADDRESS = indirizzo completo della cantina (facoltativo; se assente, appare SECRET WINE CELLAR)
+LOCATION_MAPS_URL = https://maps.app.goo.gl/kuj99ByGESoAXH6Q8?g_st=ic
+Non inserire mai queste variabili nel codice pubblico o nel repository. Sono lette soltanto dalla funzione server.
+Dopo aver configurato le variabili, effettua un nuovo deploy se richiesto da Netlify.
+Il server non trasmette l'indirizzo prima del 30/10/2026 ore 22:00 italiane. Dopo la scadenza la pagina si aggiorna automaticamente entro circa 30 secondi. L'ora viene verificata dal server, non soltanto dal browser.
+
+ATTENZIONE: chiunque possieda il link o il QR potrà vedere l'indirizzo dopo la rivelazione; questo non costituisce un sistema di accesso riservato con autenticazione.
+
+Il QR eventualmente visibile nelle vecchie bozze grafiche dell'invito NON è quello definitivo.
+
+ATTENZIONE: non caricare il link Maps in un file pubblico del repository; inserirlo soltanto nelle variabili di ambiente Netlify. Il sito deve essere pubblicato tramite Netlify con GitHub, NON GitHub Pages: GitHub Pages non esegue la funzione server che protegge il link fino alle 22:00.
